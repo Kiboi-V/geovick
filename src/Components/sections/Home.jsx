@@ -11,13 +11,14 @@ export const Home = () => {
             >
                 
             <div className="text-center z-10 px-4 mt-1">
-                <h1 className="text-6xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center"> 
-                    Hi, I'm Victor
-                </h1>
-
-                <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-                    A Geospatial Developer
-                </p>
+                <h1 className="text-6xl font-bold mb-3 text-center">
+                    <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
+                        Hi, I'm Vector
+                    </span>
+                    </h1>
+                    <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
+                    Transforming coordinates into products
+                    </p>
 
                 <div className="flex justify-center space-x-4 mt-50">
                     <a href="#projects" 

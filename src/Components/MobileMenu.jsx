@@ -1,112 +1,42 @@
-// import { useEffect } from "react"
-
-// export const MobileMenu=({menuOpen, setMenuOpen})=> {
-
-//     return (
-//         <div className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
-//                         transition-all duration-300 ease-in-out
-
-//                         ${
-//                             menuOpen 
-//                                 ? "h-screen opacity-100 pointer-events-auto"
-//                                 : "h-0 opacity-0 pointer-events-none"
-//                         }
-//                       `}
-//         >
-
-//             <button onClick={()=> setMenuOpen(false)} 
-//                 className="absolute top-6 right-6 text-white text-3xl focus: outline-none cursor-pointer">
-//                 aria-label = "Close Menu"
-//                 &times;
-//             </button>
-
-//             <a 
-//                 href="#home"
-//                 onClick={()=> setMenuOpen(false)}
-//                 className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-//                             $ {
-//                                 menuOpen 
-//                                     ? "opacity-100 translate-y-0"
-//                                     : "opacity-0 translate-y-5"
-//                                 }
-//                     `}
-//             >
-//                 Home
-//             </a>
-
-//             <a href="#about"
-//                onClick={()=> setMenuOpen(false)}
-//                className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-//                             $ {
-//                                 menuOpen 
-//                                     ? "opacity-100 translate-y-0"
-//                                     : "opacity-0 translate-y-5"
-//                                 }
-//                     `}
-//             >                
-//                 About
-//             </a>
-
-//             <a href="#projects"
-//                onClick={()=> setMenuOpen(false)}
-//                className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-//                             $ {
-//                                 menuOpen 
-//                                     ? "opacity-100 translate-y-0"
-//                                     : "opacity-0 translate-y-5"
-//                                 }
-//                     `}
-//             >                
-//                 Projects
-//             </a>
-
-//             <a href="#contact"
-//                onClick={()=> setMenuOpen(false)}
-//                className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300
-//                             $ {
-//                                 menuOpen 
-//                                     ? "opacity-100 translate-y-0"
-//                                     : "opacity-0 translate-y-5"
-//                                 }
-//                     `}
-//             >                
-//                 Contact
-//             </a>
-//         </div>
-
-//     );
-// }
-
-import { useEffect } from "react";
+import React from "react";
 
 export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
   return (
-    <div
-      className={`fixed top-0 left-0 w-full bg-[rgba(10,10,10,0.8)] z-40 flex flex-col items-center justify-center
-        transition-all duration-300 ease-in-out
-        ${menuOpen ? "h-screen opacity-100 pointer-events-auto" : "h-0 opacity-0 pointer-events-none"}
-      `}
-    >
-      <button
+    <div className={`fixed inset-0 z-50 ${menuOpen ? 'block' : 'hidden'}`}>
+      {/* Backdrop */}
+      <div 
+        className="absolute inset-0 bg-black bg-opacity-90"
         onClick={() => setMenuOpen(false)}
-        className="absolute top-6 right-6 text-white text-3xl focus:outline-none cursor-pointer"
-        aria-label="Close Menu"
+      />
+      
+      {/* Menu */}
+      <div 
+        className="absolute top-0 right-0 h-full w-72 bg-gray-900 shadow-xl"
+        onClick={(e) => e.stopPropagation()}
       >
-        &times;
-      </button>
+        <div className="p-6 pt-20">
+          <button
+            onClick={() => setMenuOpen(false)}
+            className="absolute top-6 right-6 text-white text-3xl"
+            aria-label="Close menu"
+          >
+            &times;
+          </button>
 
-      {["home", "about", "projects", "contact"].map((section) => (
-        <a
-          key={section}
-          href={`#${section}`}
-          onClick={() => setMenuOpen(false)}
-          className={`text-2xl font-semibold text-white my-4 transform transition-transform duration-300 ${
-            menuOpen ? "opacity-100 translate-y-0" : "opacity-0 translate-y-5"
-          }`}
-        >
-          {section.charAt(0).toUpperCase() + section.slice(1)}
-        </a>
-      ))}
+          <nav className="flex flex-col space-y-6 mt-10">
+            {['home', 'about', 'projects', 'contact'].map((item) => (
+              <a
+                key={item}
+                href={`#${item}`}
+                onClick={() => setMenuOpen(false)}
+                className="text-xl font-medium text-white hover:text-cyan-300 transition-colors px-4 py-2"
+              >
+                {item.charAt(0).toUpperCase() + item.slice(1)}
+              </a>
+            ))}
+          </nav>
+        </div>
+      </div>
     </div>
   );
 };

@@ -11,7 +11,7 @@ export const Home = () => {
             >
                 
             <div className="text-center z-10 px-4 mt-1">
-                <h1 className="text-6xl font-bold mb-3 text-center">
+                <h1 className="text-4xl font-bold mb-3 text-center">
                     <span className="bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent">
                         Hi, I'm Vector
                     </span>

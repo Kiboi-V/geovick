@@ -6,9 +6,9 @@ export const LoadingScreen = ({ onComplete }) => {
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
     
     const gisPhrases = [
-        "< DevelopingWebGIS />",
-        "< SpatialDataIntegration />",
-        "< OptimizingQueries />",
+        "< WebGIS />",
+        "< SpatialData />",
+        "< OptimizeQueries />",
         "< />",
         "< Prototype />",
         

@@ -115,15 +115,15 @@ export const About = () => {
                                 <h3 className="text-xl fot-bold mb-4">Work Experience</h3>
                                 <div className="space-y-4 text-grau-300">
                                     <div>
-                                        <h4 className="font-semibold">Intern at Athi Water Works (2023)</h4>
+                                        <h4 className="font-semibold">Attaché at Athi Water Works (2023)</h4>
                                         <p> Engineering Survey, GIS </p>
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold">Intern at DRSRS (2024) </h4>
+                                        <h4 className="font-semibold">Attaché at DRSRS (2024) </h4>
                                         <p> Earth Observation, geospatial web apps </p>
                                     </div>
                                     <div>
-                                        <h4 className="font-semibold">Intern at Geo-Loop (Current) </h4>
+                                        <h4 className="font-semibold">Intern at Geo-Loop (2025) </h4>
                                         <p> Land Survey, GIS, Land Information Management Systems </p>
                                     </div>
                                 </div>

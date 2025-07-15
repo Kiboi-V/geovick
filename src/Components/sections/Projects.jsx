@@ -74,7 +74,7 @@ export const Projects = () => {
                         </div>
                         <div>
                             <div className="flex justify-between items-center">
-                                <a href="/lims.mp4"
+                                <a href= {`${import.meta.env.BASE_URL}lims.mp4`}
                                    target="_blank"
                                    className="text-blue-400 hover:text-blue-300 underline transition-colors my-4"> View Project ➤</a>
                             </div>
@@ -99,7 +99,7 @@ export const Projects = () => {
                         </div>
                         <div>
                             <div className="flex justify-between items-center">
-                                <a href="/AFRONAUGHTS.pptx"
+                                <a href={`${import.meta.env.BASE_URL}AFRONAUGHTS.pptx`}
                                    target="_blank"
                                    className="text-blue-400 hover:text-blue-300 underline transition-colors my-4"> View Project ➤</a>
                             </div>

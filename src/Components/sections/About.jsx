@@ -18,6 +18,7 @@ export const About = () => {
         'ArcGIS Pro',
         'QGIS',
         'AutoCAD',
+        'STAC'
         ]
 
     const dataSkills=[

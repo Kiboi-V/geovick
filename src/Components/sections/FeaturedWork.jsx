@@ -30,13 +30,13 @@ export const FeaturedWork = () => {
             />
             <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/90 to-transparent z-20">
               <h3 className="text-xl font-bold text-white">GIS Stack</h3>
-              <p className="text-cyan-100 mt-2"> "You cant' fix by analysis what you bungled by design"
+              <p className="text-cyan-100 mt-2"> "You can't fix by analysis what you bungled by design"
               </p>
             </div>
           </div>
         </div>
 
-        {/* Grid of GIS Work Samples */}
+   
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {[
             {
@@ -55,7 +55,7 @@ export const FeaturedWork = () => {
               title: "Routing Planning",
               description: "Systematic Sampling, Proper distribution & max coverage",
               file: "Route.jpg",
-              tags: ["Google Earth Engine", "Machine Learning"]
+              tags: ["Google Earth Pro", "Clustering"]
             },
             
           ].map((item, index) => (

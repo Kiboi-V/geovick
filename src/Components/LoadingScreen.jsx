@@ -6,11 +6,11 @@ export const LoadingScreen = ({ onComplete }) => {
     const [currentPhraseIndex, setCurrentPhraseIndex] = useState(0);
     
     const gisPhrases = [
-        "< WebGIS />",
-        "< SpatialData />",
-        "< OptimizeQueries />",
-        "< />",
-        "< Prototype />",
+        "< 🌍 Welcome to geovick />",
+        "< Crafting spatial solutions />",
+        "< Geomode activated 🛰️/>",
+        "< Rendering insights.../>",
+        "< Data meets design />",
         
     ];
 
@@ -84,11 +84,11 @@ export const LoadingScreen = ({ onComplete }) => {
 
 function getStatusMessage(currentIndex, totalPhrases) {
     const messages = [
-        "Analyzing user needs...",
+        "Loading",
         "Data Workflows...",
-        "Configuring views and tools...",
-        "Almost there...",
-        "Customized products",
+        "Location intelligence...",
+        "Visualizing geospatial insights",
+        "Customized products 🚀",
     ];
     return messages[Math.min(currentIndex, messages.length - 1)];
 }

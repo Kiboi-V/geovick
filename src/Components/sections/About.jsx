@@ -9,15 +9,21 @@ export const About = () => {
         'Postgres',
         'javascript'
     ]
+     const survSkills=[
+        'RTK',
+        'Land Survey',
+        'Topo Survey',
+        'Engineering Survey',
+        'AutoCAD',
+
+     ]
      const gisSkills=[
-        'Surveying',
         'Spatial Analysis',
         'Remote Sensing',
         'Climate Modelling',
         'GIS & Mapping',
         'ArcGIS Pro',
         'QGIS',
-        'AutoCAD',
         'STAC'
         ]
 
@@ -47,6 +53,7 @@ export const About = () => {
                 <div className="grid grid-cols-1 gap-4 mb-8">
                     {[
                         {title: "Tech", skills: techSkills},
+                        {title: "Survey", skills: survSkills},
                         {title: "GIS", skills: gisSkills}, 
                         {title: "Data", skills: dataSkills}
                     ].map((category, index) => (

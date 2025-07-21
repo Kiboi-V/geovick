@@ -52,10 +52,10 @@ export const FeaturedWork = () => {
               tags: ["STAC", "ArcGIS", "Python","RandomForest"]
             },
             {
-              title: "Routing Planning",
+              title: "Route Planning",
               description: "Systematic Sampling, Proper distribution & max coverage",
               file: "Route.jpg",
-              tags: ["Google Earth Pro", "Clustering"]
+              tags: ["Google Earth Pro", "Clustering","TSP"]
             },
             
           ].map((item, index) => (
